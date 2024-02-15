@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./Login.scss";
+import { useState } from "react";
 import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 import VisibilityOffRoundedIcon from "@mui/icons-material/VisibilityOffRounded";
 
@@ -11,13 +11,13 @@ const Login = () => {
   };
   return (
     <div className="login">
-      <div className="right">
+      <div className="card">
         <div className="logo">
           <h2>EASY</h2>
           <h2>FARM</h2>
         </div>
         <div className="title">
-          <h3>Create a account...</h3>
+          <h3>Welcome back to farm</h3>
         </div>
         <div className="inputs">
           <div className="input">

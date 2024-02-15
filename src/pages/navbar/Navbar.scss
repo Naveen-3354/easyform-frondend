@@ -1,0 +1,79 @@
+.navbar {
+  width: 100%;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  .logo {
+    display: flex;
+    h3 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: 500;
+      font-style: oblique;
+    }
+    h3:nth-child(1) {
+      color: blue;
+    }
+
+    h3:nth-child(2) {
+      color: green;
+    }
+    img {
+      height: 40px;
+    }
+  }
+
+  .delivery {
+    display: flex;
+    gap: 8px;
+    h5 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .address {
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+    input {
+      width: 350px;
+      padding: 5px 20px;
+      background-color: rgb(228, 228, 228);
+    }
+    .search-icon{
+        right: 10px;
+        top: 5px;
+        color: gray;
+        position: absolute;
+    }
+  }
+
+  .cart {
+    display: flex;
+
+    .wishlist{
+        .wishlist-icon{
+            color: rgb(109, 109, 109);
+        }
+    }
+    .bag{
+        
+    }
+  }
+
+  .profile {
+    img {
+      height: 30px;
+    }
+  }
+}
