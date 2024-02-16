@@ -15,9 +15,10 @@ const Navbar = () => {
   const [categorydropDown, setCategoryDropDown] = useState("none")
 
   const handleCategory=()=>{
-    console.log(categorydropDown);
     categorydropDown === "none" ? setCategoryDropDown("block") : setCategoryDropDown("none")
   }
+
+  
   return (
     <div className="navbar">
       <div className="logo">
@@ -34,7 +35,7 @@ const Navbar = () => {
         <div className="category link" >
           <GridViewRoundedIcon className="link-icon" onClick={handleCategory}/>
           {/* <h3>Category</h3> */}
-          <DropDown hide={categorydropDown}/>
+          <DropDown hide={categorydropDown} />
         </div>
         <div className="bag link">
           <ShoppingBagRoundedIcon className="link-icon" />

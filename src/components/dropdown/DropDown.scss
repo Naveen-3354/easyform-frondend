@@ -13,10 +13,11 @@
     grid-gap: 10px;
     padding: 0 20px;
 
-    div {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    .supCat {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
       p {
         text-transform: capitalize;
         font-weight: 500;
@@ -26,12 +27,16 @@
       p:hover {
         font-size: 15px;
       }
+      .subCat {
+        position: absolute;
+        background-color: lightgreen;
+        width: 10px;
+        height: 10px;
+        top: 0;
+      }
     }
   }
 }
 
-
-
-.categoryDropDown{
-    
+.categoryDropDown {
 }

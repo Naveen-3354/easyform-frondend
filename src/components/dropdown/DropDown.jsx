@@ -3,33 +3,30 @@ import "./DropDown.scss";
 
 import { groceryCategories } from "../../data/groceryCategories";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const DropDown = (props) => {
-  // const [hide, setHide]= useState("none")
-  const [subcat, setSubcat] = useState();
-  const keys = Object.keys(groceryCategories);
+  const [subcat, setSubcat] = useState({ hide: "none" });
 
-  const handleCatogory = (e) => {
-    const { innerText } = e.target;
-    console.log(groceryCategories[innerText.toLowerCase()]);
-    setSubcat(groceryCategories[innerText.toLowerCase()]);
-    // handleCategorys();
+  const handleCatogory = (data) => {
+    // console.log(data);
+    // const grainsArray = Object.entries(data.data).map(([category, items]) => ({
+    //   category,
+    //   items,
+    // }));
+    // console.log(grainsArray);
   };
 
-  // const handleCategorys=()=>{
-  //   hide === "none" ? setHide("block") : setHide("none")
-  // }
   return (
     <div className="DropDown" style={{ display: `${props.hide}` }}>
       <div className="category">
-        {keys.map((data) => {
+        {groceryCategories.map((data, index) => {
           return (
-            <div>
-              <p onClick={handleCatogory}>
-                {data}
-                <CategoryDropDown hide={subcat} />
-              </p>
+            <div key={index} className="supCat">
+              <p onClick={() => handleCatogory(data)}>{data.name}</p>
+              {/* <div className="subCat">
+                <CategoryDropDown display={subcat} />
+              </div> */}
             </div>
           );
         })}
@@ -39,8 +36,11 @@ export const DropDown = (props) => {
 };
 
 const CategoryDropDown = (props) => {
+  // const keys = Object.keys(props.display["data"]);
+
+  // console.log(keys);
   return (
-    <div className="categoryDropDown" style={{ display: `${props.hide}` }}>
+    <div className="categoryDropDown">
       <div className="data">data</div>
     </div>
   );
