@@ -12,9 +12,8 @@ function App() {
       {/* <Login /> */}
 
       {/* <Register /> */}
-      {/* <Navbar /> */}
-
       <Home />
+
 
     </div>
   );

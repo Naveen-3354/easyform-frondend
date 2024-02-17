@@ -1,79 +1,101 @@
-.navbar {
+.navbar1 {
   width: 100%;
-  background-color: rgb(248, 248, 248);
+  height: 100vh;
   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
 
-  .logo {
-    display: flex;
+  .text {
+    position: relative;
+    background-color: lightgray;
+    padding: 0 10px;
     h3 {
       margin: 0;
-      font-size: 25px;
-      font-weight: 500;
-      font-style: oblique;
-    }
-    h3:nth-child(1) {
-      color: blue;
+      font-size: 2em;
     }
 
-    h3:nth-child(2) {
-      color: green;
+    ::before {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      content: "";
+      width: 0%;
+      height: 5px;
+      background-color: rgb(255, 145, 0);
+      transition: 0.5s;
     }
-    img {
-      height: 40px;
+    ::after {
+      position: absolute;
+      top: 80%;
+      right: 50%;
+      content: "";
+      width: 0%;
+      height: 5px;
+      background-color: rgb(255, 145, 0);
+      transition: 0.5s;
+    }
+    :hover::after,
+    :hover::before {
+      width: 50%;
     }
   }
 
-  .delivery {
-    display: flex;
-    gap: 8px;
-    h5 {
-      margin: 0;
-      font-size: 14px;
+  .button {
+    overflow: hidden;
+    button {
+      position: relative;
+      font-size: 1.5em;
       font-weight: 500;
+      background-color: rgb(173, 235, 235);
+      padding: 0 10px;
+      border-radius: 5px;
     }
-    .address {
-      p {
-        margin: 0;
-        padding: 0;
-        font-size: 15px;
-        font-weight: 500;
+
+    ::after {
+      content: "Home";
+      position: absolute;
+      // top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0);
+      // transition: 0.5s;
+    }
+
+    :hover::after {
+      color: white;
+      animation: buttom-ani 1s ease-in-out;
+
+      @keyframes buttom-ani {
+        0% {
+          // width: 0;
+          border-radius: 50%;
+          top: 100%;
+        }
+        100% {
+          // width: 100%;
+          top: 0;
+          border-radius: none;
+        }
       }
     }
-  }
 
-  .search {
-    position: relative;
-    input {
-      width: 350px;
-      padding: 5px 20px;
-      background-color: rgb(228, 228, 228);
-    }
-    .search-icon{
-        right: 10px;
-        top: 5px;
-        color: gray;
-        position: absolute;
-    }
-  }
+    :not(:hover::after) {
+      animation: buttom-ani 1s ease-in-out;
 
-  .cart {
-    display: flex;
-
-    .wishlist{
-        .wishlist-icon{
-            color: rgb(109, 109, 109);
+      @keyframes buttom-ani {
+        0% {
+          // width: 0;
+          border-radius: 50%;
+          top: 100%;
         }
-    }
-    .bag{
-        
-    }
-  }
-
-  .profile {
-    img {
-      height: 30px;
+        100% {
+          // width: 100%;
+          top: 0;
+          border-radius: none;
+        }
+      }
     }
   }
 }

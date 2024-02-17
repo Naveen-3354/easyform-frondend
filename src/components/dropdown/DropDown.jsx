@@ -1,20 +1,9 @@
-import { Handshake } from "@mui/icons-material";
 import "./DropDown.scss";
-
 import { groceryCategories } from "../../data/groceryCategories";
-
-import React, { useEffect, useState } from "react";
-
 export const DropDown = (props) => {
-  const [subcat, setSubcat] = useState({ hide: "none" });
 
   const handleCatogory = (data) => {
-    // console.log(data);
-    // const grainsArray = Object.entries(data.data).map(([category, items]) => ({
-    //   category,
-    //   items,
-    // }));
-    // console.log(grainsArray);
+    console.log(data);
   };
 
   return (
@@ -24,9 +13,6 @@ export const DropDown = (props) => {
           return (
             <div key={index} className="supCat">
               <p onClick={() => handleCatogory(data)}>{data.name}</p>
-              {/* <div className="subCat">
-                <CategoryDropDown display={subcat} />
-              </div> */}
             </div>
           );
         })}
@@ -35,13 +21,10 @@ export const DropDown = (props) => {
   );
 };
 
-const CategoryDropDown = (props) => {
-  // const keys = Object.keys(props.display["data"]);
-
-  // console.log(keys);
+export const Notify = () => {
+  
   return (
-    <div className="categoryDropDown">
-      <div className="data">data</div>
+    <div className="notify">
     </div>
   );
 };
